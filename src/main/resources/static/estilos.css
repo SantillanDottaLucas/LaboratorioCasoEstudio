@@ -1,0 +1,84 @@
+:root {
+    --bg-principal: #06402b;
+    --color-primario: #6366f1; 
+    --color-primario-hover: #4f46e5;
+    --color-oscuro: #0f172a; 
+    --borde-suave: #e2e8f0;
+}
+
+body {
+    background-color: #06402b !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #334155;
+}
+
+h1.text-primary {
+    color: var(--color-primario) !important;
+    letter-spacing: -1px;
+}
+
+.card {
+    border: none !important;
+    border-radius: 16px !important;
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.card.shadow-sm {
+    overflow: hidden; /* Asegura que los bordes redondeados corten la tabla interna */
+}
+
+.card-header.bg-dark {
+    background-color: var(--color-oscuro) !important;
+    border-bottom: none;
+    padding: 1.25rem;
+}
+
+/* Tablas interactivas */
+.table {
+    margin-bottom: 0 !important;
+}
+
+.table-dark {
+    background-color: var(--color-oscuro) !important;
+}
+
+.table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(99, 102, 241, 0.04) !important; 
+}
+
+.btn-primary {
+    background-color: var(--color-primario) !important;
+    border-color: var(--color-primario) !important;
+    border-radius: 8px !important;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primario-hover) !important;
+    border-color: var(--color-primario-hover) !important;
+}
+
+.btn-success {
+    border-radius: 8px !important;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(25, 135, 84, 0.2);
+}
+
+.form-control, .form-select {
+    border: 2px solid var(--borde-suave) !important;
+    border-radius: 8px !important;
+    padding: 0.6rem 0.8rem !important;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--color-primario) !important;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15) !important;
+}
