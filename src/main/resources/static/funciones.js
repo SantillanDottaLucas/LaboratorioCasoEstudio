@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Saludo Dinámico según la hora
+    // 1. Saludo Dinámico
     const saludoDinamico = document.getElementById("saludo-dinamico");
     if (saludoDinamico) {
         const hora = new Date().getHours();
@@ -19,16 +19,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const alertas = document.querySelectorAll('.alert-dismissible');
     alertas.forEach(alerta => {
         setTimeout(() => {
-            // Animación suave usando clases de Bootstrap
             alerta.classList.remove('show');
             alerta.classList.add('fade');
-            // La removemos del DOM un toque después de la animación
             setTimeout(() => alerta.remove(), 1500);
-        }, 4000); // 4 segundos de gracia
+        }, 4000); // 4 seg
     });
 });
 
-// 3. Confirmación de borrado mejorada (Se llama desde el HTML)
+// 3. Confirmación de borrado 
 function confirmarBorrado(event, nombreElemento) {
     const seguro = confirm(`¿Estás seguro de que querés eliminar "${nombreElemento}"?`);
     if (!seguro) {
